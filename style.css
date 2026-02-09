@@ -1,0 +1,147 @@
+
+body {
+    margin: 0;
+    font-family: 'Roboto', serif;
+    background: #BA8B72;
+    color: #fff;
+}
+  
+section {
+    padding: 4rem 10%;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+/* Navigation*/
+nav {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #dcb59c;
+    /*opacity: 70%;*/
+    padding: 0.8rem;
+    border-radius: 999px;
+  }
+  
+nav a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 999px;
+    
+}
+
+h2{
+    font-size: 2.4rem;
+}
+
+h1{
+  font-size: 1.5rem
+}
+
+h3{
+  font-size: 1.3rem;
+  margin-top:0;
+  margin-bottom: 0;
+}
+p{
+    font-size: 1.2em;
+    margin-top:0;
+    margin-bottom: 0;
+}
+/*Links for imgs*/
+.links a{
+    text-decoration: none;
+}
+.links a img {
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    margin-right: 12px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+.links a:hover img {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+  
+  /* Introduction/HERO section*/
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+.profile-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 6px solid #e7c4aa;
+    object-fit: cover;
+  }
+  
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  /* Tech stack */
+.tech-grid {
+  display: flex;
+  gap: 2rem;
+  
+  stroke: #c09375;
+  stroke-width: 4px;
+  padding: 2rem;
+  border: 4px solid #e7c4aa;
+  border-radius: 30px;
+  width: fit-content;
+  height: 4.5rem;
+}
+
+.tech-grid img {
+  width: 5rem;
+  height: 5rem;
+}
+.tech-icon{
+  text-align: center;
+}
+
+
+/*Work/Research/Leadership contatiner*/
+.container{
+  display:flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container img{
+  width: 20rem;
+  height: 20rem;
+}
+
+.text-content{
+  flex:1;
+  
+}
+/*background 2*/
+.grid2
+{
+    background-color: #AC7B5F ;
+}
+.noSpaceB{
+  margin-bottom: 0;
+}
+
+.noSpaceT {
+  margin-top:0;
+}
+
+.noSpace{
+  margin-top:0;
+  margin-bottom: 0;
+}
+  
