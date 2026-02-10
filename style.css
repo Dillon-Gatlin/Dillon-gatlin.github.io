@@ -144,4 +144,26 @@ p{
   margin-top:0;
   margin-bottom: 0;
 }
+/* contact part*/
+.image-container {
+  display: flex; /* Aligns items in a row */
+  flex-wrap: wrap; /* Allows items to drop to the next line if they don't fit */
+  gap: 4rem; /* Adds space between the image blocks */
+  justify-content: center; /* Centers the group */
+}
+
+.image-container figure {
+  margin: 0;
+  max-width: 25rem; /* Limits the width of each image block */
+  text-align: center; /* Centers the caption under the image */
+}
+
+.image-container img {
+  width: 13rem; /* Makes image fill the figure width */
+  height: 13rem;
+}
+
+.image-container figcaption{
+  font-size: 1.4rem;
+}
   
