@@ -38,6 +38,7 @@ h1,h2, strong{
 }
 
 /* Grid Layout */
+/* Fixed Home Grid */
 .grid-container-H {
   display: grid;
   max-width: 1100px;
@@ -47,13 +48,34 @@ h1,h2, strong{
       "profile about about"
       "profile tech hero"
       "contact tech edu"
-      "Experience tech github";
+      "experience tech github"; /* Changed Experience to experience for consistency */
 }
-/* Add these if they are missing from your Home HTML */
-.experience { grid-area: Experience; }
-.education  { grid-area: edu; }
-.about      { grid-area: about; }
-.tech-stack { grid-area: tech; }
+
+/* Matching Classes */
+.profile-pic { grid-area: profile; }
+.about       { grid-area: about; }
+.tech-stack  { grid-area: tech; }
+.hero-title  { grid-area: hero; }
+.contact     { grid-area: contact; }
+.education   { grid-area: edu; }
+.experience  { grid-area: experience; } /* Ensure this matches your HTML class */
+.github      { grid-area: github; }
+
+/* Fixed Mobile Responsiveness */
+@media (max-width: 768px) {
+  .grid-container-H { /* Make sure this matches the container name used above */
+      grid-template-areas: 
+          "profile"
+          "about"
+          "hero"
+          "tech"
+          "edu"
+          "github"
+          "experience";
+      grid-template-columns: 1fr;
+  }
+}
+
 .work {
   font-size: 14px;
 }
@@ -288,20 +310,6 @@ h1,h2, strong{
 }
 
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .grid-container {
-      grid-template-areas: 
-          "profile"
-          "about"
-          "hero"
-          "tech"
-          "certs"
-          "edu"
-          "github";
-      grid-template-columns: 1fr;
-  }
-}
 .github {
   grid-area: github;
   display: flex;
