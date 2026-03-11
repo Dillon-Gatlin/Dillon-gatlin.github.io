@@ -1,169 +1,527 @@
+:root {
+  --bg-color: #2b2b2b;
+  --card-color: #4a4542;
+  --text-color: #e5e5e5;
+  --accent-gray: #b5b5b5;
+}
 
 body {
-    margin: 0;
-    font-family: 'Roboto', serif;
-    background: #BA8B72;
-    color: #fff;
-}
-  
-section {
-    padding: 4rem 10%;
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
-  }
-/* Navigation*/
-nav {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    background: #dcb59c;
-    /*opacity: 70%;*/
-    padding: 0.8rem;
-    border-radius: 999px;
-  }
-  
-nav a {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    color: white;
-    border-radius: 999px;
-    
-}
-
-h2{
-    font-size: 2.4rem;
-}
-
-h1{
-  font-size: 1.5rem
-}
-
-h3{
-  font-size: 1.3rem;
-  margin-top:0;
-  margin-bottom: 0;
-}
-p{
-    font-size: 1.2em;
-    margin-top:0;
-    margin-bottom: 0;
-}
-/*Links for imgs*/
-.links a{
-    text-decoration: none;
-}
-.links a img {
-    width: 48px;
-    height: 48px;
-    text-decoration: none;
-    margin-right: 12px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-  
-.links a:hover img {
-    transform: scale(1.1);
-    opacity: 0.85;
-}
-  
-  /* Introduction/HERO section*/
-.hero {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-  }
-  
-.profile-img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    border: 6px solid #e7c4aa;
-    object-fit: cover;
-  }
-  
-.hero-text h1 {
-    font-size: 3rem;
-    margin: 0;
-  }
-  
-.subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
-  }
-  /* Tech stack */
-.tech-grid {
-  display: flex;
-  gap: 2rem;
-  
-  stroke: #c09375;
-  stroke-width: 4px;
-  padding: 2rem;
-  border: 4px solid #e7c4aa;
-  border-radius: 30px;
-  width: fit-content;
-  height: 4.5rem;
-}
-
-.tech-grid img {
-  width: 5rem;
-  height: 5rem;
-}
-.tech-icon{
-  text-align: center;
-}
-
-
-/*Work/Research/Leadership contatiner*/
-.container{
-  display:flex;
-  align-items: center;
-  gap: 1rem;
-}
-.container img{
-  width: 20rem;
-  height: 20rem;
-}
-
-.text-content{
-  flex:1;
-  
-}
-/*background 2*/
-.grid2
-{
-    background-color: #AC7B5F ;
-}
-.noSpaceB{
-  margin-bottom: 0;
-}
-
-.noSpaceT {
-  margin-top:0;
-}
-
-.noSpace{
-  margin-top:0;
-  margin-bottom: 0;
-}
-/* contact part*/
-.image-container {
-  display: flex; /* Aligns items in a row */
-  flex-wrap: wrap; /* Allows items to drop to the next line if they don't fit */
-  gap: 4rem; /* Adds space between the image blocks */
-  justify-content: center; /* Centers the group */
-}
-
-.image-container figure {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  max-width: 25rem; /* Limits the width of each image block */
-  text-align: center; /* Centers the caption under the image */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.image-container img {
-  width: 13rem; /* Makes image fill the figure width */
-  height: 13rem;
+h1,h2, strong{
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #ffffff;
 }
 
-.image-container figcaption{
-  font-size: 1.4rem;
+/* Navbar */
+.navbar {
+  background-color: var(--card-color);
+  padding: 10px 40px;
+  border-radius: 50px;
+  margin-bottom: 30px;
 }
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+
+/* Grid Layout */
+.grid-container-H {
+  display: grid;
+  max-width: 1100px;
+  gap: 20px;
+  grid-template-columns: 1fr 0.8fr 1fr;
+  grid-template-areas: 
+      "profile about about"
+      "profile tech hero"
+      "contact tech edu"
+      "Experience tech github";
+}
+
+.work {
+  font-size: 14px;
+}
+.location{
+  font-size: 12px;
+  color: #ffffff;
   
+}
+.workDesc{
+  font-size: 12px;
+}
+.grid-container-P {
+  display: grid;
+  max-width: 1100px;
+  gap: 20px;
+  /* Defining 2 equal columns for a cleaner portfolio look */
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+      "certifications awards"
+      "projectIMG project";
+}
+
+.certifications { grid-area: certifications; }
+.awards         { grid-area: awards; }
+.Project        { grid-area: project; }
+.projectIMG    { grid-area: projectIMG; }
+
+/* Responsive fix for the portfolio grid */
+@media (max-width: 768px) {
+  .grid-container-P {
+      grid-template-areas: 
+          "certifications"
+          "awards"
+          "project"
+          "projectIMG";
+      grid-template-columns: 1fr;
+  }
+}
+
+.grid-container-C {
+  display: grid;
+  max-width: 1100px;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+      "email github"
+      "linkedIN github"
+      "submission submission";
+}
+
+/* Ensure these classes match your grid-template-areas labels */
+.email      { grid-area: email; }
+.github     { grid-area: github; } /* This card will span 2 rows automatically */
+.linkedIN   { grid-area: linkedIN; }
+.submission { grid-area: submission; }
+
+/* Styling for the contact buttons to make them look uniform */
+.card .contact-item {
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    width: fit-content;
+}
+
+/* Fix for your Mobile Media Query (Currently it says grid-container-P, change to C) */
+@media (max-width: 768px) {
+  .grid-container-C {
+      grid-template-areas: 
+          "email"
+          "linkedIN"
+          "github"
+          "submission";
+      grid-template-columns: 1fr;
+  }
+}
+/* Card Styling */
+.card {
+  background-color: var(--card-color);
+  padding: 25px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.profile-pic { grid-area: profile; padding: 0; }
+.profile-pic img { width: 100%; height: 100%; object-fit: cover; }
+
+.about { grid-area: about; }
+.tech-stack { 
+  grid-area: tech;
+  
+ }
+.hero-title { 
+  grid-area: hero; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  background-color: #64564e;
+}
+
+.education { grid-area: edu; }
+
+.contact{
+  grid-area: contact;
+  background-color: #64564e;
+}
+.contact-link {
+  display: flex;
+  align-items: center; 
+  gap: 12px;          
+  text-decoration: none;
+  color: #e8e8e8;         
+  transition: color 0.3s ease;
+}
+.contact-grid {
+  display: flex;
+  flex-direction: row; 
+  justify-content: start;
+  gap: 30px;
+  margin-top: 20px;
+}
+.contact-icon {
+  width: 40px;         
+  height: 40px;
+  object-fit: contain;
+}
+
+.contact-link:hover {
+  color: #d29b7c; 
+}
+.contact-item {
+  text-decoration: none; 
+  color: #ffffff;
+  background-color: #7b6457; 
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+/*Email*/
+.contact-item[href^="mailto"] {
+  background-color: #7b6457; /* Dark Grey/Black */
+}
+
+.contact-item:hover {
+  transform: translateY(-3px); /* Slight lift effect */
+  filter: brightness(1.2);
+}
+
+.github { 
+  grid-area: github; text-align: center; 
+  background-color: #64564e;}
+
+/* Sub-elements */
+/* Container for the icons needs to be relative so tooltips stay attached */
+.grid-icons {
+  display: flex;
+  flex-wrap: wrap; /* Allows icons to move to the next line after 3 */
+  gap: 15px;      /* Spacing between the icons */
+  margin-top: 15px;
+  justify-content: flex-start; /* Aligns icons to the left */
+}
+
+.icon-box {
+  position: relative; 
+  width: 30px; 
+  height: 30px;
+  background-color: #5a5450; /* A slightly lighter shade than the card */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+/* The Tooltip Box */
+.icon-box::after {
+  content: attr(data-label); /* Pulls the name from HTML data-label */
+  position: absolute;
+  bottom: 120%; /* Sits above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0; /* Hidden by default */
+  pointer-events: none;
+  transition: all 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* The Little Triangle Arrow */
+.icon-box::before {
+  content: '';
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+/* Show on Hover */
+.icon-box:hover::after,
+.icon-box:hover::before {
+  opacity: 1;
+  bottom: 125%; /* Slight "float up" animation */
+}
+
+/* Ensure the icon itself fits well */
+.icon-box img {
+  width: 100%;
+  height: auto;
+}
+
+.activity-bar {
+  background-color: var(--accent-gray);
+  color: var(--card-color);
+  padding: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-areas: 
+          "profile"
+          "about"
+          "hero"
+          "tech"
+          "certs"
+          "edu"
+          "github";
+      grid-template-columns: 1fr;
+  }
+}
+.github {
+  grid-area: github;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.github-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Space between icon and name */
+}
+
+.gh-avatar-container {
+  width: 120px; 
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle border like the image */
+}
+
+.gh-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gh-username {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Hover effect to make it feel interactive */
+.github-link:hover .gh-avatar-container {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.noSpaceB {
+  margin-bottom: 0;
+}
+
+.noSpaceT{
+  margin-top: 0;
+}
+.noSpace{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.date {
+  font-size: 0.8rem;
+  
+}
+
+/* Tab Container */
+.exp-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 10px;
+}
+
+/* Tab Buttons */
+.tab-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: var(--accent-gray);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.tab-btn.active {
+  background: #64564e; 
+  color: white;
+  font-weight: bold;
+}
+
+/* Hide Content by Default */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Show Active Content */
+.tab-content.active-content {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.Project {
+    grid-area: project;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Gives enough room for the footer */
+}
+
+.serif-title {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+/* This pushes the footer to the very bottom of the card */
+.tab-content {
+    flex-grow: 1;
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.tab-content.active-content {
+    display: flex; 
+}
+
+.project-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end; 
+    margin-top: auto;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.project-link {
+    background-color: #836f64;
+    color: #4a4542;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 4px;        
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.project-link:hover {
+    background-color: #ffffff;
+}
+
+.project-tags {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.projectIMG {
+  padding: 0; 
+  overflow: hidden;
+  display: flex;
+}
+
+.proj-img-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: none;   
+  animation: fadeIn 0.4s ease;
+}
+
+.active-img {display: block;   }
+
+/*submission css*/
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  gap: 15px;
+}
+
+/* Style for inputs and textarea */
+.contact-form input, 
+.contact-form textarea {
+  width: 95%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #836f64; /* Matches your project link color */
+}
+
+/* Make button look like your other links */
+.submit-btn {
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  padding: 12px 30px;
+}
+
+/* Mobile fix for side-by-side inputs */
+@media (max-width: 480px) {
+  .form-group {
+      flex-direction: column;
+  }
+}

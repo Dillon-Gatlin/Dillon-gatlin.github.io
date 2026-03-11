@@ -1,213 +1,220 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Full-Stack AI Engineer</title>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-        <a href="#home" class="active">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        </nav>
-    
-        <section id="home" class="hero grid2">
-        <img src="assets/profile.jpg" alt="Profile picture" class="profile-img">
-    
-        <div class="hero-text" >
-            <h1>Hello, I’m <br><span>Dillon Gatlin</span></h1>
-            <p class="subtitle">AI & Data Science Enthusiast</p>
-    
-            <div class="links">
-                <a href="https://www.linkedin.com/in/dillon-gatlin/" target="_blank">
-                    <img src="assets/linkedIN.png" alt="LinkedIn">
-                </a>
-                  
-                <a href="https://github.com/Dillon-Gatlin" target="_blank">
-                    <img src="assets/github.png" alt="GitHub">
-                </a>                  
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        
+        <a href="portfolio.html">Portfolio</a>
+        
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="grid-container-H">
+        <div class="card profile-pic">
+            <img src="assets/profile.jpg" alt="Profile Picture">
+        </div>
+
+        <div class="card about">
+            <h2>About Me</h2>
+            <p>Computer Science Undergraduate based in Texas with a focus 
+                on AI and Data Science. I have a hands-on background in applied research, where I translate 
+                complex data into working systems. Beyond the data, I build the actual tools that use it—handling 
+                everything from the user interface to the server-side logic. Having led development teams, I’m comfortable 
+                managing project timelines and making sure the technical side of a build stays aligned with the end goal.</p>
+        </div>
+
+        <div class="card tech-stack">
+            <h2>Tech-Stack</h2>
+            <div class="stack-section">
+                <span>AI engineering & Datascience</span>
+                <div class="grid-icons">
+                    <div class="icon-box" data-label="Python">
+                        <img src="assets/python.png" alt="Python">
+                    </div>
+                    <div class="icon-box" data-label="MATLAB">
+                        <img src="assets/MATLAB.png" alt="MATLAB">
+                    </div>
+                    <div class="icon-box" data-label="JuptyerNB">
+                        <img src="assets/jupyter.png" alt="JuptyerNB">
+                    </div>
+                    <div class="icon-box" data-label="PostgreSQL">
+                        <img src="assets/Postgre.png" alt="PostgreSQL">
+                    </div>
+                    <div class="icon-box" data-label="DBeaver">
+                        <img src="assets/DBeaver.png" alt="DBeaver">
+                    </div>
+                    <div class="icon-box" data-label="Excel">
+                        <img src="assets/Excel.png" alt="Excel">
+                    </div>
+                </div>
+            </div>
+            <div class="stack-section">
+                <span>Software engineering</span>
+                <div class="grid-icons">
+                    <div class="icon-box" data-label="Java">
+                        <img src="assets/java.png" alt="Java">
+                    </div>
+                    <div class="icon-box" data-label="JavaScript">
+                        <img src="assets/JavaScript.png" alt="JavaScript">
+                    </div>
+                    <div class="icon-box" data-label="CSS">
+                        <img src="assets/CSS.png" alt="CSS">
+                    </div>
+                    <div class="icon-box" data-label="React">
+                        <img src="assets/react.png" alt="React">
+                    </div>
+                    <div class="icon-box" data-label="Node.js">
+                        <img src="assets/nodeJS.png" alt="Node.js">
+                    </div>
+                </div>
+            </div>
+            <div class="stack-section">
+                <span>Design & Prototyping</span>
+                <div class="grid-icons">
+                    <div class="icon-box" data-label="Figma">
+                        <img src="assets/figma.png" alt="Figma">
+                    </div>
+                    <div class="icon-box" data-label="Canva">
+                        <img src="assets/Canva.png" alt="Canva">
+                    </div>
+                    <div class="icon-box" data-label="Photoshop">
+                        <img src="assets/photoshop.png" alt="Photoshop">
+                    </div>
+                </div>
+            </div>
+            <div class="stack-section">
+                <span>Game Development</span>
+                <div class="grid-icons">
+                    <div class="icon-box" data-label="GDScript">
+                        <img src="assets/Godot.png" alt="GDScript">
+                    </div>
+                    <div class="icon-box" data-label="Aseprite">
+                        <img src="assets/Aseprite.png" alt="Aseprite">
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        <div class="card hero-title">
+            <h1>Full-Stack AI Engineer</h1>
+        </div>
+
+
+        <div class="card github">
+            <a href="https://github.com/Dillon-Gatlin" target="_blank" class="github-link">
+                <div class="gh-avatar-container">
+                    <img src="assets/DG_icon.gif" alt="Github Icon" class="gh-avatar">
+                </div>
+                <h2 class="gh-username">Dillon-Gatlin</h2>
+            </a>
+        </div>
+
+
+        <div class="card Experience">
+            <h2> Experience</h2>
+            
+            <div class="exp-tabs">
+                <button class="tab-btn active" onclick="showExp(event, 'brain-lab')">B.R.A.I.N. Lab</button>
+                <button class="tab-btn" onclick="showExp(event, 'next-role')">M.I.S.R Lab</button>
+                <button class="tab-btn" onclick="showExp(event, 'other-role')">T.C.S</button>
+            </div>
+        
+            <div id="brain-lab" class="tab-content active-content">
+                <strong class="work">Undergraduate Researcher — Computational Neuroscience</strong>
+                <p class="location">Tarleton State University | 8/2025 – Present</p>
+                <p class="workDesc">
+                    • Engineered an EEG pipeline to classify real vs. pseudo-words using 25+ ML models. <br>
+                    • Awarded #2 of 55 in STEM at the 2026 RIED Symposium <br>
+                    <strong>Tech:</strong> Python (PyTorch/MNE), MATLAB, Scikit-learn.
+                </p>
+            </div>
+        
+            <div id="next-role" class="tab-content">
+                <strong class="work">Undergraduate Researcher-ML Engineer</strong>
+                <p class="location">Tarleton State University| 3/2025 – 12/2025</p>
+                <p class="workDesc">
+                    • Engineered a novel multimodal dataset achieving a 94.77% F1-score (Manuscript under review).<br>
+                    • Spearheaded dataset preprocessing, prompt optimization, and multimodal evaluation.<br>
+                    <strong>Tech:</strong> Python(PyTorch),Scikit-learn.,JuptyerNB
+                </p>
+            </div>
+        
+            <div id="other-role" class="tab-content">
+                <strong class="work">V.P. Tarleton Computer Society</strong>
+                <p class="location">Tarleton State University | 1/2025 – Present</p>
+                <p class="workDesc">
+                    • Increased organization membership by 30% through social media launches and technical resource expansion.<br>
+                    • Directed two concurrent teams (10+ members) to ship a web platform and a published game .<br>
+                    <strong>Tech:</strong> React,Node.js,GDScript, Figma
+                </p>
             </div>
         </div>
-        </section>
+
+
+        <div class="card education">
+            <div class="edu-header">
+                <h2>Education</h2>
+            </div>
+            <p class="noSpace"><strong>Tarleton State University</strong>
+                <p1 class ="date"> (2022-present)</p1>
+            </p>
+            
+            <p class="noSpace">B.S in Computer Science, Concentration Artificial Intelligence and Data Science</p>
+        </div>
     
-        <section id="about">
-        <h2 class="noSpaceB noSpaceT">About Me</h2>
-        <p>Computer Science undergraduate based in Texas with a focus on Artificial Intelligence 
-        and Data Science. Experienced in applied AI research and passionate about building 
-        impactful, data-driven systems using analytics, machine learning, and software engineering.</p>
-        </section>
-    
-        <section class="grid2">
-        <h2 class="noSpace">Tech Stack</h2>
-        <h1 class="noSpace">Artificial Intelligence & Datascience</h1>
-            <div class="tech-grid">
-                <div class="tech-icon">
-                    <img src="assets/python.png">
-                    <p>Python </p>
+        <div class="card github">
+            <a href="https://github.com/Dillon-Gatlin" target="_blank" class="github-link">
+                <div class="gh-avatar-container">
+                    <img src="assets/DG_icon.gif" alt="Github Icon" class="gh-avatar">
                 </div>
-                <div class="tech-icon">
-                    <img src="assets/MATLAB.png">
-                    <p>MATLAB </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/jupyter.png">
-                    <p>JupyterNB </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/Postgre.png">
-                    <p>Postgre </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/DBeaver.png">
-                    <p>DBeaver </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/Excel.png">
-                    <p>Excel </p>
-                </div>
-            </div>
-        <h1 class="noSpaceB noSpaceT">Software Engineering</h1>
-            <div class="tech-grid">
-                <div class="tech-icon">
-                    <img src="assets/java.png">
-                    <p>Java </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/JavaScript.png">
-                    <p>JavaScript </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/CSS.png">
-                    <p>CSS </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/react.png">
-                    <p>React </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/nodeJS.png">
-                    <p>Node.JS </p>
-                </div>
-                
-            </div>
-            <h1 class="noSpaceB noSpaceT">Design & Prototyping</h1>
-            <div class="tech-grid">
-                <div class="tech-icon">
-                    <img src="assets/figma.png">
-                    <p>Figma </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/Canva.png">
-                    <p>Canva </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/photoshop.png">
-                    <p>Photoshop </p>
-                </div>
-                
-            </div>
-            <h1 class="noSpaceB noSpaceT">Game Development</h1>
-            <div class="tech-grid">
-                <div class="tech-icon">
-                    <img src="assets/Godot.png">
-                    <p>Godot </p>
-                </div>
-                <div class="tech-icon">
-                    <img src="assets/Aseprite.png">
-                    <p>Aseprite </p>
-                </div>
-            </div>
-        </section>
-        <section id="portfolio">
-            <h2 class="noSpaceT"> Work Experience</h2>
-            <div class="container">
-                <a href="https://www.tarleton.edu/brain-lab/" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/BrainLab.png" alt ="BRAIN Lab logo">
+                <h2 class="gh-username">Dillon-Gatlin</h2>
+            </a>
+        </div>
+
+        <div class="card contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <a href="https://www.linkedin.com/in/dillon-gatlin/" target="_blank" class="contact-link">
+                    <img src="assets/linkedin.png" alt="LinkedIn" class="contact-icon">
+                    <span>LinkedIn</span>
                 </a>
-                <div class ="text-content">
-                    <h3>Undergraduate Researcher — Computational Neuroscience</h3>
-                    <h3>B.R.A.I.N. Lab, Tarleton State University</h3>
-                    <p>Supervisor: Dr. Debadatta Dash (Dept. of NRSC)</p>
-                    <p> October 2025-Present</p>
-                    <ul class="noSpace">
-                        <li>Leading a research project on classifying real vs. 
-                            pseudowords from EEG data to explore speech-based Brain–Computer Interfaces (BCIs)</li>
-                        <li>Designing and implementing machine learning and deep learning pipelines, including 
-                            data preprocessing, feature extraction, and model evaluation</li>
-                        <li>Conducting signal analysis and neural data processing to support model development</li>
 
-                        <li><b>Tech Stack: MATLAB, Python, Jupyter Notebook, Excel, EEGLab, PyTorch, scikit-learn, and MNE</b></li>
-                    </ul>
-                </div>
-            </div>
-
-            <h2 class="noSpaceB"> Research Experience</h2>
-            <div class="container">
-                <a href="https://github.com/Dillon-Gatlin" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/MISR_Lab.png" alt ="Machine Intelligence and Security Research Lab logo">
+                <a href="mailto:gatlin.dillon79@gmail.com" class="contact-link">
+                    <img src="assets/email.png" alt="Email" class="contact-icon">
+                    <span>Email</span>
                 </a>
-                <div class ="text-content">
-                    <h3>Undergraduate Researcher — Computational Neuroscience</h3>
-                    <h3>Machine Intelligence and Security Research Lab, Tarleton State University</h3>
-                    <p>Supervisor: Dr. Thejas Gubbi Sadashiva (Dept. CSEE)</p>
-                    <p> March 2025-December 2025</p>
-                    <ul class="noSpace">
-                        <li>Led a research initiative to design and develop a multimodal dataset for 
-                            binary classification, managing the project as team lead</li>
-                        <li>Implemented and trained models using PyTorch and scikit-learn, including evaluation
-                            pipelines and image generation</li>
-                        <li>Gained expertise in dataset engineering, data preprocessing, multimodal evaluation, 
-                            prompt engineering, and model testing (Paper under review)</li>
-
-                        <li><b>Technologies: Python, Jupyter Notebook, PyTorch, scikit-learn</b></li>
-                    </ul>
-                </div>
             </div>
-            <h2 class="noSpaceB"> Leadership & Extracurriculars</h2>
-            <div class="container">
-                <a href="https://linktr.ee/tarletoncomputersociety" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/TCS.png" alt ="Machine Intelligence and Security Research Lab logo">
-                </a>
-                <div class ="text-content">
-                    <h3>Vice President — ACM Tarleton Computer Society</h3>
-                    <h3>Tarleton State University</h3>
-                    <p> January 2025 – Present</p>
-                    <ul class="noSpace">
-                        <li>Led and coordinated two-semester projects, guiding members through technical 
-                            implementation and design fundamentals while fostering collaboration and continuous progress</li>
-                        <li>Organized workshops and development events, mentoring members in software engineering, web development,
-                             and game design</li>
-                        <li>versaw the development of a Tarleton-themed platformer game, Oscar P’s Journey, 
-                            and the TCS website (currently under review by Tarleton Web Development staff)</li>
+        </div>
 
-                        <li><b>Technologies: Node.js, JavaScript, React, CSS, Figma, GDScript</b></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    </main>
 
-        <section id="contact" class="grid2">
-            <h2 class="noSpace" style="text-align: center;">Contact</h2>
-            <div class="image-container">
-                <figure>
-                    <a href="https://www.linkedin.com/in/dillon-gatlin/" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/linkedIN.png" alt="LinkedIN Icon">
-                    </a>
-                  <figcaption>Dillon-gatlin</figcaption>
-                </figure>
 
-                <figure>
-                    <a <a href="https://github.com/Dillon-Gatlin" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/github.png" alt="Github Icon">
-                    </a>
-                  <figcaption>Dillon-Gatlin</figcaption>
-                </figure>
 
-                <figure>
-                    <a href="mailto:gatlin.Dillon79@gmail.com">
-                        <img src="assets/email.png" alt="Email Icon">
-                    </a>
-                    <figcaption>Gatlin.Dillon79@gmail.com</figcaption>
-                  </figure>
-                </div>
-        </section>
-    </body>
-  
+    <script>
+        function showExp(evt, id) {
+            // Hide all tab content
+            const content = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < content.length; i++) {
+                content[i].classList.remove("active-content");
+            }
+        
+            // Deactivate all buttons
+            const buttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+        
+            // Show the specific tab and set button to active
+            document.getElementById(id).classList.add("active-content");
+            evt.currentTarget.classList.add("active");
+        }
+        </script>
+</body>
+</html>

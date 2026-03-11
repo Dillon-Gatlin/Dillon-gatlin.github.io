@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Section</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        
+        <a href="portfolio.html">Portfolio</a>
+        
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="grid-container-P">
+       
+        <div class="card certifications">
+            <h2>Certifications</h2>
+            <div >
+                <strong>Deep Learning Specialization</strong>
+                <p class="noSpaceT">Comprehensive training in deep neural networks, model tuning, and sequence modeling for AI applications.</p>
+            </div>
+            
+        </div>
+
+        <div class="card awards">
+            <h2>Awards</h2>
+            <div>
+                <strong>2nd place RIED 2026 Symposium</strong>
+                <p class="noSpaceT">Decoding Real vs. Pseudo-word from Brain Activity. #2 out of 55 for technical merit, research content, and oral presentation.</p>
+            </div>
+        </div>
+
+        <div class="card Project project-display">
+        <div class="exp-tabs">
+            <button class="tab-btn active" onclick="openProject(event, 'proj1')">Project 1</button>
+            <button class="tab-btn" onclick="openProject(event, 'proj2')">Project 2</button>
+        </div>
+
+        <div id="proj1" class="tab-content active-content">
+            <div class="project-main-body">
+                <h2 class="serif-title">"Sales Performance Dashboard"</h2>
+                <p>Executed data aggregation and transformation using PostgreSQL and DBeaver, performed data validation in Excel, and
+                    created a Tableau Public dashboard for performance analysis, visualizing 4 unique KPIs.</p>
+            </div>
+            
+            <div class="project-footer">
+                
+                <div class="project-tags">
+                    <span class="tag">DBeaver</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Excel</span>
+                </div>
+                <a href="https://github.com/Dillon-Gatlin/Sales-Performance-Dashboard" 
+                target="_blank"  rel ="noopener noreferrer" class="project-link">Link to project</a>
+            </div>
+        </div>
+
+        <div id="proj2" class="tab-content">
+            <div class="project-main-body">
+                <h2 class="serif-title">"Oscar P's Journey"</h2>
+                <p>I led a team of four to build a platformer featuring Tarleton’s mascot. I wrote the core 
+                    movement code and player mechanics, and built a system that let my teammates plug in their own custom
+                     levels without breaking the rest of the game. My main goal was making sure everyone had the creative freedom 
+                     to design their own themes while keeping the gameplay feel consistent across the whole project.</p>
+            </div>
+            
+            <div class="project-footer">
+                
+                <div class="project-tags">
+                    <span class="tag">GDScript</span>
+                    <span class="tag">Aseprite</span>
+                    <span class="tag">Canva</span>
+                </div>
+                <a href="https://github.com/Dillon-Gatlin/TCSRetroArcadeGame" target="_blank"  rel ="noopener noreferrer"
+                class="project-link">Link to project</a>
+            </div>
+            </div>
+        </div>
+
+        <div class="card projectIMG">
+            <img id="proj1-img" class="proj-img-content active-img" src="assets/Dashboard.png" alt="Oscar P's Journey Icon">
+            
+            <img id="proj2-img" class="proj-img-content" src="assets/OP_Icon.png" alt="Retail Sales Performance Dashboard Image">
+        </div>
+
+
+        
+
+
+    </main>
+    <script>
+        function openProject(evt, projectName) {
+            // 1. Existing logic: Hide all project text contents
+            const contents = document.querySelectorAll(".Project .tab-content");
+            contents.forEach(content => content.classList.remove("active-content"));
+        
+            // 2. Existing logic: Deactivate all project buttons
+            const buttons = document.querySelectorAll(".Project .tab-btn");
+            buttons.forEach(btn => btn.classList.remove("active"));
+        
+            // 3. NEW: Hide all project images
+            const images = document.querySelectorAll(".projectIMG .proj-img-content");
+            images.forEach(img => img.classList.remove("active-img"));
+        
+            // 4. Show the specific project content and highlight the button
+            document.getElementById(projectName).classList.add("active-content");
+            evt.currentTarget.classList.add("active");
+        
+            // 5. NEW: Show the corresponding image (e.g., if ID is 'proj1', find 'proj1-img')
+            document.getElementById(projectName + "-img").classList.add("active-img");
+        }
+    </script>
+    
+</body>
+</html>

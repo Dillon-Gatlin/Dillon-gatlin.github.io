@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Section</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        
+        <a href="portfolio.html">Portfolio</a>
+        
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="grid-container-C">
+        <div class="card email">
+            <h2>Email</h2>
+           
+            <a href="mailto:Gatlin.dillon79@gmail.com" class="contact-item">Gatlin.dillon79@gmail.com</a>
+        </div>
+    
+        <div class="card github">
+            <a href="https://github.com/Dillon-Gatlin" class="github-link" target="_blank">
+                <div class="gh-avatar-container">
+                    <img src="https://github.com/Dillon-Gatlin.png" alt="GitHub Avatar" class="gh-avatar">
+                </div>
+                <p class="gh-username">@Dillon-Gatlin</p>
+                <span class="contact-item">View Profile</span>
+            </a>
+        </div>
+    
+        <div class="card linkedIN">
+            <h2>LinkedIn</h2>
+            <p>Connect and find out more about me.</p>
+            <a href="https://www.linkedin.com/in/dillon-gatlin/" class="contact-item">Connect on LinkedIn</a>
+        </div>
+    
+        <div class="card submission">
+            <h2>Send a Message</h2>
+            <form action="https://formspree.io/f/xyknerej" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" placeholder="What's on your mind?" rows="5" required></textarea>
+                
+                <button type="submit" class="contact-item submit-btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    
+</body>
+</html>
