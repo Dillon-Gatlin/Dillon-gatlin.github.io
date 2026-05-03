@@ -18,11 +18,106 @@
 
     <main class="grid-container-P">
        
+        
+        <div class="proj-section-title1 portfolio-header">
+            <h2>Featured Projects</h2>
+        </div>
+        <div class="card Project project-display">
+            <div class="exp-tabs">
+                <button class="tab-btn active" onclick="openProject(event, 'proj0', 'projectIMG')">Workout Tracker</button>
+                <button class="tab-btn" onclick="openProject(event, 'proj1', 'projectIMG')">GesturePass</button>
+                <button class="tab-btn" onclick="openProject(event, 'proj2', 'projectIMG')">Sales Dashboard</button>
+                
+            </div>
+
+            <div id="proj0" class="tab-content active-content">
+                <div class="project-main-body">
+                    <h2 class="serif-title">"WorkoutTracker"</h2>
+                    <p> Final Project for Computer Vision class at Tarleton State University,
+                        Spring 2026. It incorporates two ways to track workouts without using Machine 
+                        Learning. Centroid Tracking Algorithim for live applications and Point Feature Matching 
+                        Algorithim for precorded video applications.</p>
+                </div>
+                
+                <div class="project-footer">
+                    
+                    <div class="project-tags">
+                        <span class="tag">MATLAB</span>
+                        <span class="tag">MATLAB APP Designer</span>
+                    </div>
+                    <a href="https://github.com/diyanaselene/Workout-Tracker" target="_blank"  rel ="noopener noreferrer"
+                    class="project-link">Link to project</a>
+                </div>
+            </div>
+
+            <div id="proj1" class="tab-content">
+                <div class="project-main-body">
+                    <h2 class="serif-title">"GesturePass"</h2>
+                    <p> Final Project for Machine Learning class at Tarleton State 
+                        University in Spring 2026. We split the work into 2 parts, one focusing on 
+                        the hand gestures and the other focusing on the facial gestures. For each
+                        hand or face, you would train them individually, assigned to specific labels
+                        determined by input. A model was then trained on the data, with its weights 
+                        being saved. After both models were imported into a final script to detect 
+                        hand and face gestures at once, which will trigger user access if the 
+                        combination is correct.</p>
+                </div>
+                
+                <div class="project-footer">
+                    
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Mediapipe</span>
+                        <span class="tag">openCV2</span>
+                        <span class="tag">Sklearn</span>
+                    </div>
+                    <a href="https://github.com/diyanaselene/Workout-Tracker" target="_blank"  rel ="noopener noreferrer"
+                    class="project-link">Link to project</a>
+                </div>
+            </div>
+            <div id="proj2" class="tab-content">
+                <div class="project-main-body">
+                    <h2 class="serif-title">"Sales  Dashboard"</h2>
+                    <p>Executed data aggregation and transformation using PostgreSQL and DBeaver, performed data validation in Excel, and
+                        created a Tableau Public dashboard for performance analysis, visualizing 4 unique KPIs.</p>
+                </div>
+                
+                <div class="project-footer">
+                    <div class="project-tags">
+                        <span class="tag">DBeaver</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Tableau</span>
+                        <span class="tag">Excel</span>
+                    </div>
+                    <a href="https://github.com/Dillon-Gatlin/Sales-Performance-Dashboard" 
+                    target="_blank"  rel ="noopener noreferrer" class="project-link">Link to project</a>
+                </div>
+            </div>
+        </div>
+            <div class="card projectIMG">
+                <img id="proj0-img" class="proj-img-content active-img" src="assets/WorkoutTracker.png" alt="Oscar P's Journey Icon">
+                <img id="proj1-img" class="proj-img-content" src="assets/GesturePass.png" alt="Retail Sales Performance Dashboard Image">
+                <img id="proj2-img" class="proj-img-content" src="assets/Dashboard.png" alt="Retail Sales Performance Dashboard Image">
+                
+                
+            </div>
+           
+        <div class="proj-section-title2 portfolio-header">
+            <h2>Achievements & Credentials </h2>
+        </div>
+        <!-- CERTIFCATIONS -->
         <div class="card certifications">
             <h2>Certifications</h2>
             <div >
                 <strong>Deep Learning Specialization</strong>
                 <p class="noSpaceT">Comprehensive training in deep neural networks, model tuning, and sequence modeling for AI applications.</p>
+            </div>
+        </div>
+        <div class="card publications">
+            <h2>Publications</h2>
+            <div >
+                <strong>Decoding Real vs Pseudo-words from EEG</strong>
+                <p class="noSpaceT">NeuroErgonomics (NYC 2026), Extended Abstract, 2026.</p>
             </div>
             
         </div>
@@ -35,84 +130,66 @@
             </div>
         </div>
 
-        <div class="card Project project-display">
-        <div class="exp-tabs">
-            <button class="tab-btn active" onclick="openProject(event, 'proj1')">Sales Dashboard</button>
-            <button class="tab-btn" onclick="openProject(event, 'proj2')">Oscar P's Journey</button>
+        <div class="proj-section-title3 portfolio-header">
+            <h2>Additional Projects </h2>
         </div>
-
-        <div id="proj1" class="tab-content active-content">
-            <div class="project-main-body">
-                <h2 class="serif-title">"Sales  Dashboard"</h2>
-                <p>Executed data aggregation and transformation using PostgreSQL and DBeaver, performed data validation in Excel, and
-                    created a Tableau Public dashboard for performance analysis, visualizing 4 unique KPIs.</p>
-            </div>
-            
-            <div class="project-footer">
+        <!-- Bonus projects  -->
+        <div class="card bonusProject project-display">
+            <div class="exp-tabs">
+                <button class="tab-btn active" onclick="openProject(event, 'proj3', 'bonusProjectIMG')">Oscar P's Journey</button>
                 
-                <div class="project-tags">
-                    <span class="tag">DBeaver</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">Tableau</span>
-                    <span class="tag">Excel</span>
-                </div>
-                <a href="https://github.com/Dillon-Gatlin/Sales-Performance-Dashboard" 
-                target="_blank"  rel ="noopener noreferrer" class="project-link">Link to project</a>
-            </div>
-        </div>
-
-        <div id="proj2" class="tab-content">
-            <div class="project-main-body">
-                <h2 class="serif-title">"Oscar P's Journey"</h2>
-                <p>I led a team of four to build a platformer featuring Tarleton’s mascot. I wrote the core 
-                    movement code and player mechanics, and built a system that let my teammates plug in their own custom
-                     levels without breaking the rest of the game. My main goal was making sure everyone had the creative freedom 
-                     to design their own themes while keeping the gameplay feel consistent across the whole project.</p>
-            </div>
-            
-            <div class="project-footer">
                 
-                <div class="project-tags">
-                    <span class="tag">GDScript</span>
-                    <span class="tag">Aseprite</span>
-                    <span class="tag">Canva</span>
+            </div>
+            <div id="proj3" class="tab-content active-content">
+                <div class="project-main-body">
+                    <h2 class="serif-title">"Oscar P's Journey"</h2>
+                    <p>I led a team of four to build a platformer featuring Tarleton’s mascot. I wrote the core 
+                        movement code and player mechanics, and built a system that let my teammates plug in their own custom
+                        levels without breaking the rest of the game. My main goal was making sure everyone had the creative freedom 
+                        to design their own themes while keeping the gameplay feel consistent across the whole project.</p>
                 </div>
-                <a href="https://github.com/Dillon-Gatlin/TCSRetroArcadeGame" target="_blank"  rel ="noopener noreferrer"
-                class="project-link">Link to project</a>
+                
+                <div class="project-footer">
+                    
+                    <div class="project-tags">
+                        <span class="tag">GDScript</span>
+                        <span class="tag">Aseprite</span>
+                        <span class="tag">Canva</span>
+                    </div>
+                    <a href="https://github.com/Dillon-Gatlin/TCSRetroArcadeGame" target="_blank"  rel ="noopener noreferrer"
+                    class="project-link">Link to project</a>
+                </div>
             </div>
+
+        </div>
+            <div class="card bonusProjectIMG">
+                <img id="proj3-img" class="proj-img-content active-img" src="assets/OP_Icon.png" alt="Oscar P's Journey Icon">
             </div>
-        </div>
-
-        <div class="card projectIMG">
-            <img id="proj1-img" class="proj-img-content active-img" src="assets/Dashboard.png" alt="Oscar P's Journey Icon">
-            
-            <img id="proj2-img" class="proj-img-content" src="assets/OP_Icon.png" alt="Retail Sales Performance Dashboard Image">
-        </div>
-
-
-        
-
+       
 
     </main>
+    
     <script>
-        function openProject(evt, projectName) {
-            // 1. Existing logic: Hide all project text contents
-            const contents = document.querySelectorAll(".Project .tab-content");
+        function openProject(evt, projectName, imgContainerClass) {
+            // Get the parent card to only affect local tabs
+            const card = evt.currentTarget.closest('.card');
+            
+            // 1. Hide tabs only within THIS card
+            const contents = card.querySelectorAll(".tab-content");
             contents.forEach(content => content.classList.remove("active-content"));
-        
-            // 2. Existing logic: Deactivate all project buttons
-            const buttons = document.querySelectorAll(".Project .tab-btn");
+
+            // 2. Deactivate buttons only within THIS card
+            const buttons = card.querySelectorAll(".tab-btn");
             buttons.forEach(btn => btn.classList.remove("active"));
-        
-            // 3. NEW: Hide all project images
-            const images = document.querySelectorAll(".projectIMG .proj-img-content");
+
+            // 3. Hide images only within the specific image container
+            const imageContainer = document.querySelector("." + imgContainerClass);
+            const images = imageContainer.querySelectorAll(".proj-img-content");
             images.forEach(img => img.classList.remove("active-img"));
-        
-            // 4. Show the specific project content and highlight the button
+
+            // 4. Activate current selections
             document.getElementById(projectName).classList.add("active-content");
             evt.currentTarget.classList.add("active");
-        
-            // 5. NEW: Show the corresponding image (e.g., if ID is 'proj1', find 'proj1-img')
             document.getElementById(projectName + "-img").classList.add("active-img");
         }
     </script>

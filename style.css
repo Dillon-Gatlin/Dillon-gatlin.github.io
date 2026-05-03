@@ -94,23 +94,57 @@ h1,h2, strong{
   /* Defining 2 equal columns for a cleaner portfolio look */
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
-      "certifications awards"
-      "projectIMG project";
+      
+      "title1 title1"
+      "projectIMG project"
+      "title2 title2"
+      "certifications certifications"
+      "publications awards"
+      
+      "title3 title3"
+      "bonusProjectIMG bonusProject";
 }
 
 .certifications { grid-area: certifications; }
 .awards         { grid-area: awards; }
 .Project        { grid-area: project; }
 .projectIMG    { grid-area: projectIMG; }
+.bonusProject   { grid-area: bonusProject; }
+.bonusProjectIMG    { grid-area: bonusProjectIMG; }
+.proj-section-title1 { grid-area: title1; }
+.proj-section-title2 { grid-area: title2; }
+.proj-section-title3 { grid-area: title3; }
+/* Style the titles to match your aesthetic */
+.portfolio-header {
+  margin-top: 20px;
+  padding-left: 10px;
+  
+}
+
+.portfolio-header h2 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-color);
+}
+
 
 /* Responsive fix for the portfolio grid */
 @media (max-width: 768px) {
   .grid-container-P {
       grid-template-areas: 
-          "certifications"
-          "awards"
+          
+          "title1"
           "project"
-          "projectIMG";
+          "projectIMG"
+          "title2"
+          "publications"
+          "awards"
+          "certifications"
+          "title3"
+          "bonusProject"
+          "bonusProjectIMG";
       grid-template-columns: 1fr;
   }
 }
@@ -475,7 +509,7 @@ h1,h2, strong{
     align-items: flex-start;
     gap: 8px;
 }
-.projectIMG {
+.projectIMG, .bonusProjectIMG {
   padding: 0; 
   overflow: hidden;
   display: flex;
