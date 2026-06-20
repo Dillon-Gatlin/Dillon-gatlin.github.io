@@ -65,7 +65,7 @@
         outputEl.scrollTop = outputEl.scrollHeight;
 
         try {
-            const res = await fetch("https://portfolio-backend.onrender.com/api/chat", {
+            const res = await fetch("https://portfolio-backend-2gtg.onrender.com/api/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ user_query: text })
@@ -82,5 +82,5 @@
     inputEl.onkeypress = (e) => { if (e.key === 'Enter') handleMessage(); };
 
     // Wake up the sleeping free-tier backend immediately when the user lands on the site
-    fetch("https://portfolio-backend.onrender.com/").catch(() => {});
+    fetch("https://portfolio-backend-2gtg.onrender.com").catch(() => {});
 })();
