@@ -30,11 +30,11 @@
         <button id="chat-launcher"></button>
         <div id="chat-window">
             <div id="chat-header">
-                <span>AI Portfolio Assistant</span>
+                <span>DWG-Bot</span>
                 <button id="chat-close">×</button>
             </div>
             <div id="chat-output">
-                <p style="color:#666; font-style:italic;">Ask me about my experience or technical background!</p>
+                <p style="color:#666; font-style:italic;">Ask me about my experience or technical background! (first query might take longer than usual)</p>
             </div>
             <div id="chat-input-area">
                 <input type="text" id="chat-input" placeholder="Type a message...">
