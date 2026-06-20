@@ -14,18 +14,32 @@
          flex-direction: column; overflow: hidden; z-index: 1000; font-family: sans-serif; }
         #chat-header { background: #d29b7c; color: white; padding: 15px; font-weight: bold; display: flex;
          justify-content: space-between; }
-        #chat-close { background: none; border: none; color: white; cursor: pointer; font-size: 18px; }
-        #chat-output { flex: 1; padding: 15px; overflow-y: auto; font-size: 14px; background: #333; color:white; }
+        #chat-close { background: none; border: none; color: white; cursor: pointer;
+             font-size: 18px; }
+        #chat-output { flex: 1; padding: 15px; overflow-y: auto; font-size: 14px; 
+            background: #333; color:white; }
         #chat-input-area { display: flex; border-top: 1px solid #5c5c5c; }
-        #chat-input { flex: 1; padding: 12px; border: none; outline: none; background: #5a5450; color: white; }
-        #chat-send { background: #d29b7c; color: white; border: none; padding: 0 15px; cursor: pointer; }
+        #chat-input { flex: 1; padding: 12px; border: none; outline: none; 
+            background: #5a5450; color: white; }
+        #chat-send { background: #d29b7c; color: white; border: none; padding: 0 15px; 
+            cursor: pointer; }
+        #chat-output table { width: 100%; border-collapse: collapse; 
+            margin: 10px 0; font-size: 13px;}
+        #chat-output th, #chat-output td { border: 1px solid #5c5c5c; padding: 8px; 
+            text-align: left; }
+        #chat-output th { background-color: #d29b7c; color: white;}
     `;
+
     const styleSheet = document.createElement("style");
     styleSheet.innerText = styles;
     document.head.appendChild(styleSheet);
-
+    // this is for formatting
+    const markdownScript = document.createElement('script');
+    markdownScript.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+    document.head.appendChild(markdownScript);
     // Build the HTML elements structure
     const chatContainer = document.createElement("div");
+
     chatContainer.innerHTML = `
         <button id="chat-launcher"></button>
         <div id="chat-window">
@@ -60,7 +74,8 @@
         const text = inputEl.value.trim();
         if (!text) return;
 
-        outputEl.innerHTML += `<p style="margin: 8px 0; color: #ffffff;"><strong>You:</strong> ${text}</p>`;
+        const formattedReply = marked.parse(data.reply);
+        outputEl.innerHTML += `<div style="margin: 8px 0; color: #ffffff;"><strong>Assistant:</strong> ${formattedReply}</div>`;
         inputEl.value = "";
         outputEl.scrollTop = outputEl.scrollHeight;
 
