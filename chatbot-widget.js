@@ -74,22 +74,33 @@
         const text = inputEl.value.trim();
         if (!text) return;
 
-        const formattedReply = marked.parse(data.reply);
-        outputEl.innerHTML += `<div style="margin: 8px 0; color: #ffffff;"><strong>Assistant:</strong> ${formattedReply}</div>`;
+        //Instantly append the USER's message to the chat window
+        outputEl.innerHTML += `<div style="margin: 8px 0; color: #ffffff;"><strong>You:</strong> ${text}</div>`;
+        
+        // Clear input field and scroll down
         inputEl.value = "";
         outputEl.scrollTop = outputEl.scrollHeight;
 
         try {
+            // Make the async call to your Render backend API
             const res = await fetch("https://portfolio-backend-2gtg.onrender.com/api/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ user_query: text })
             });
+            
+            // Extract the JSON response payload
             const data = await res.json();
-            outputEl.innerHTML += `<p style="margin: 8px 0; color: #ffffff"><b>Assistant:</b> ${data.reply}</p>`;
+            // convert the markdown string into HTML elements using Marked.js
+            const formattedReply = marked.parse(data.reply);
+            outputEl.innerHTML += `<div style="margin: 8px 0; color: #ffffff;"><strong>Assistant:</strong> ${formattedReply}</div>`;
+            
         } catch (err) {
-            outputEl.innerHTML += `<p style="color:red; margin: 8px 0;">Connection error. Is the server waking up?</p>`;
+            console.error(err); // Prints the error log to the inspect panel for debugging
+            outputEl.innerHTML += `<div style="color:red; margin: 8px 0;"><strong>System:</strong> Connection error. Is the server waking up?</div>`;
         }
+        
+        // Final layout adjustment to match container heights
         outputEl.scrollTop = outputEl.scrollHeight;
     }
 
