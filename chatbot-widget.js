@@ -9,7 +9,7 @@
          background-size: 48px 48px; color: white; 
          border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; 
          box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1000;}
-        #chat-window { position: fixed; bottom: 90px; right: 20px; width: 350px; height: 450px; background: 
+        #chat-window { position: fixed; bottom: 90px; right: 20px; width: 450px; height: 650px; background: 
          white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); display: none; 
          flex-direction: column; overflow: hidden; z-index: 1000; font-family: sans-serif; }
         #chat-header { background: #d29b7c; color: white; padding: 15px; font-weight: bold; display: flex;
@@ -33,13 +33,14 @@
     const styleSheet = document.createElement("style");
     styleSheet.innerText = styles;
     document.head.appendChild(styleSheet);
-    // this is for formatting
+    // this is for formatting output
     const markdownScript = document.createElement('script');
     markdownScript.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
     document.head.appendChild(markdownScript);
     // Build the HTML elements structure
     const chatContainer = document.createElement("div");
 
+    //the UI for the inner chatbot
     chatContainer.innerHTML = `
         <button id="chat-launcher"></button>
         <div id="chat-window">
